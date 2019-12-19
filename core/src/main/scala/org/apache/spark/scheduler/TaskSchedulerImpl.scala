@@ -36,7 +36,7 @@
 package org.apache.spark.scheduler
 
 import java.nio.ByteBuffer
-import java.util.{Locale, Timer, TimerTask}
+import java.util.{Locale, Properties, Timer, TimerTask}
 import java.util.concurrent.{ConcurrentHashMap, TimeUnit}
 import java.util.concurrent.atomic.AtomicLong
 
@@ -918,6 +918,7 @@ private[spark] class TaskSchedulerImpl(
     }
   }
 
+  def getIntpClassLoader(taskProps: Properties): ClassLoader = null
 }
 
 
